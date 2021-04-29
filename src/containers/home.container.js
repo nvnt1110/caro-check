@@ -18,7 +18,7 @@ class HomeContainer extends Component {
 
   tick(row, col) {
     const { actions, array_board, piece_current, number_cell } = this.props;
-    if (this.state.is_win == 1) {
+    if (this.state.is_win === 1) {
       return;
     }
     // count number of tick 
@@ -34,11 +34,11 @@ class HomeContainer extends Component {
     const pieces_win = isWin(array_new, row, col, piece_current);
     if (pieces_win.length > 0) {
       this.setState({ is_win: 1, pieces_win: pieces_win });
-    } else if (count_tmp ==  number_cell * number_cell) {
+    } else if (count_tmp ===  number_cell * number_cell) {
       this.setState({ is_win: 0 });
     } else {
       // switch player
-      actions.switch_piece(piece_current == pieces.X ? pieces.O : pieces.X);
+      actions.switch_piece(piece_current === pieces.X ? pieces.O : pieces.X);
     }
   }
 

@@ -13,14 +13,14 @@ class Cell extends Component {
     const { data, row, col, tick, pieces_win } = this.props;
     const { class_css_normal, class_css_o, class_css_x } = this.state;
     let my_class_css =
-      data == pieces.O
+      data === pieces.O
         ? class_css_o
-        : data == pieces.X
+        : data === pieces.X
         ? class_css_x
         : class_css_normal;
     if (pieces_win != null) {
       for (var i = 0; i < pieces_win.length; i++) {
-        if (pieces_win[i][0] == row && pieces_win[i][1] == col)
+        if (pieces_win[i][0] === row && pieces_win[i][1] === col)
           my_class_css = my_class_css.concat(" btn-win");
       }
     }
@@ -29,7 +29,7 @@ class Cell extends Component {
       <button
         className={my_class_css}
         onClick={() => {
-          if (data == null) tick(row, col);
+          if (data === null) tick(row, col);
         }}
       >
         {data}

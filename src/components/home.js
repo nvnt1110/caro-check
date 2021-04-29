@@ -37,7 +37,7 @@ class Home extends Component {
                   this.setState({ numbercell: event.target.value });
                 }}
                 onKeyPress={event => {
-                  if (event.key == "Enter") {
+                  if (event.key === "Enter") {
                     if (
                       this.state.numbercell == null ||
                       (!Number.isInteger(this.state.numbercell) &&
@@ -73,9 +73,9 @@ class Home extends Component {
                 <p>
                   {" "}
                   Result :{" "}
-                  {is_win == 1 ? (
+                  {is_win === 1 ? (
                     <span>{piece_current} WIN</span>
-                  ) : is_win == 0 ? (
+                  ) : is_win === 0 ? (
                     <span>DRAW</span>
                   ) : null}
                 </p>
