@@ -1,4 +1,4 @@
-import { types, pieces } from "../constants/action.types";
+import { types } from "../constants/action.types";
 
 export const set_number_cell = number_cell => ({
     type: types.SET_NUMBER_CELL,

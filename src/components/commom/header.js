@@ -15,9 +15,6 @@ class Header extends Component {
         >
           <span className="navbar-toggler-icon" />
         </button>
-        <a className="navbar-brand" href="#">
-          TICTACTOE
-        </a>
       </nav>
     );
   }
